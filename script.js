@@ -26,6 +26,7 @@ const clickHandler = function (event) {
   if (event.target.classList.contains("grid-cell")) {
     changeCell(event.target);
     playRound();}
+    console.log(hitCount)
 }
 
 
@@ -96,9 +97,11 @@ function playRound() {
       textDisplay.textContent = "It's a tie!";
       document.removeEventListener("click", clickHandler);
     }
+    else {
     player = (hitCount % 2 === 0 ? player2 : player1);
     textDisplay.textContent = `It's ${player.name}'s turn to play`
     roundHit = 0;
+    }
   }
   else {
     textDisplay.textContent = `${player.name} is the winner!`;

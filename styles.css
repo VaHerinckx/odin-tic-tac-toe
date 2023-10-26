@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "wotfard";
+  src: url("wotfard-regular-webfont.ttf");
+}
+
 body {
   font-size: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "wotfard";
 }
 
 
@@ -8,13 +18,27 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   width: 80%;
+  height: 60%;
+  margin-bottom: 20px;
+  justify-self: center;
+  /* border: 20px solid black; */
 }
 
 .grid-cell {
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  font-size: 40px;
+}
+
+.grid-cell:hover {
+  border: 3px solid green;
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
 }
